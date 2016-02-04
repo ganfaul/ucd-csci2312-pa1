@@ -1,6 +1,8 @@
 //
 // Created by Gannon Faul on 2/4/16.
 //
+// Implementation of class Point.h
+
 #include <iostream>
 #include <cmath>
 

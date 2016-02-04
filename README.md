@@ -4,6 +4,7 @@ _working with objects_
 
 * * *
 
+For Programming Assignment 1, I was tasked with editing a
 C++ lets us program with _objects_. We describe objects in C++ by declaring and defining _classes_.
 We _declare_ our class's structure in a header file, just like in C, and _define_ it (that is, write the code that
 actually does the work) in a corresponding source code file.
@@ -11,40 +12,43 @@ actually does the work) in a corresponding source code file.
 Here is a sample header file <tt>Point.h</tt> that describes an object that represents a point in two-dimensional
 Euclidean space:
 
-```c++
-// A 2-dimensional point class!
+ ```c++
+// A 3-dimensional point class!
 // Coordinates are double-precision floating point.
+
 class Point {
 
 private:
-    double x;
-    double y;
+    double __x, __y, __z;
 
 public:
     // Constructors
-    Point();                      // default constructor
-    Point(double x, double y);    // two-argument constructor
-
-    // Destructor
-    ~Point();
+    Point();                                // default constructor
+    Point(double x, double y, double z);    // three-argument constructor
 
     // Mutator methods
     void setX(double newX);
     void setY(double newY);
+    void setZ(double newZ);
 
     // Accessor methods
     double getX() const;
     double getY() const;
+    double getZ() const;
+
+    // Distance calculator
+    double distanceTo(const Point &p) const;
 
 };
-```
-
-We can _instantiate_, or create an instance of, our class anywhere in the rest of our code by calling any of the
-constructors we have defined:
 
 ```
-Point myPoint;            // Calls Point::Point(). Notice the lack of parentheses!
-Point myOtherPoint(5, 3); // Calls two-argument constructor Point::Point(double, double). Notice auto type conversion!
+
+I can _instantiate_, or create an instance of, my class anywhere in the rest of my code by calling any of the
+constructors I have defined:
+
+```
+Point myPoint;               // Calls Point::Point(). Notice the lack of parentheses!
+Point myOtherPoint(5, 3, 4); // Calls two-argument constructor Point::Point(double, double, double). Notice auto type conversion!
 ```
 
 ### Your Task
