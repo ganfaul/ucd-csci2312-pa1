@@ -23,6 +23,9 @@ public:
     double getX() const;
     double getY() const;
     double getZ() const;
+
+    // Distance calculator
+    double distanceTo(const Point &p) const;
     
 };
 
