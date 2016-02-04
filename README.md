@@ -4,9 +4,12 @@ _working with objects_
 
 * * *
 
-C++ lets us program with _objects_. We describe objects in C++ by declaring and defining _classes_. We _declare_ our class's structure in a header file, just like in C, and _define_ it (that is, write the code that actually does the work) in a corresponding source code file.
+C++ lets us program with _objects_. We describe objects in C++ by declaring and defining _classes_.
+We _declare_ our class's structure in a header file, just like in C, and _define_ it (that is, write the code that
+actually does the work) in a corresponding source code file.
 
-Here is a sample header file <tt>Point.h</tt> that describes an object that represents a point in two-dimensional Euclidean space:
+Here is a sample header file <tt>Point.h</tt> that describes an object that represents a point in two-dimensional
+Euclidean space:
 
 ```c++
 // A 2-dimensional point class!
@@ -45,19 +48,28 @@ Point myOtherPoint(5, 3); // Calls two-argument constructor Point::Point(double,
 
 ### Your Task
 
-1.  Fork the [Github repository for CSCI 2312 PA1](https://github.com/ivogeorg/ucd-csci2312-pa1). This becomes your _remote_ repository, against which you will work. Then clone it to your local development environment (e.g. laptop). This becomes your _local_ repository against which you will develop. You will find the <tt>Point.h</tt> and <tt>Point.cpp</tt> files for the 2D Point class, along with a test suite and a driver file <tt>main.cpp</tt>.
+1.  Fork the [Github repository for CSCI 2312 PA1](https://github.com/ivogeorg/ucd-csci2312-pa1). This becomes
+your _remote_ repository, against which you will work. Then clone it to your local development environment
+ (e.g. laptop). This becomes your _local_ repository against which you will develop. You will find the <tt>Point.h</tt>
+  and <tt>Point.cpp</tt> files for the 2D Point class, along with a test suite and a driver file <tt>main.cpp</tt>.
 
-2.  Change the <tt>Point</tt> class to represent points in three (3) dimensions. Make sure to update the comments to match this change. Implement the class in a source file <tt>Point.cpp</tt>.
+2.  Change the <tt>Point</tt> class to represent points in three (3) dimensions. Make sure to update the comments to
+match this change. Implement the class in a source file <tt>Point.cpp</tt>.
 
-3.  Add a new member function to <tt>Point</tt> called <tt>distanceTo</tt>. This member function should accept as an argument a <u><tt>const Point &</tt></u> (a reference to a constant <tt>Point</tt>), and it should return a <tt>double</tt> that approximates the distance between the two points. Note that <tt>distanceTo</tt> is a _constant_ member function.
+3.  Add a new member function to <tt>Point</tt> called <tt>distanceTo</tt>. This member function should accept as an
+argument a <u><tt>const Point &</tt></u> (a reference to a constant <tt>Point</tt>), and it should return a
+<tt>double</tt> that approximates the distance between the two points. Note that <tt>distanceTo</tt> is
+a _constant_ member function.
 
-   If you find a square-root function useful for this, the C standard library has one, called <tt>sqrt()</tt>. The function takes a double and returns another double.
+   If you find a square-root function useful for this, the C standard library has one, called <tt>sqrt()</tt>.
+   The function takes a double and returns another double.
 
    To use it in your C++ code, you write
    ```c++
    #include <cmath>
    ```
-   (This means, "Include the C math library header.") And then you are all set. Remember to always include your header files, for example,
+   (This means, "Include the C math library header.") And then you are all set. Remember to always include your header
+   files, for example,
    ```c++
    #include "Point.h"
    ```
