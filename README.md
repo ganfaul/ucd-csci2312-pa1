@@ -4,13 +4,8 @@ _working with objects_
 
 * * *
 
-For Programming Assignment 1, I was tasked with editing a
-C++ lets us program with _objects_. We describe objects in C++ by declaring and defining _classes_.
-We _declare_ our class's structure in a header file, just like in C, and _define_ it (that is, write the code that
-actually does the work) in a corresponding source code file.
-
-Here is a sample header file <tt>Point.h</tt> that describes an object that represents a point in two-dimensional
-Euclidean space:
+For Programming Assignment 1, I was tasked with editing a two-dimensional point class, <tt>Point.h</tt>, to become a three-dimensional
+point class. The following code is what I've edited <tt>Point.h</tt> to:
 
  ```c++
 // A 3-dimensional point class!
@@ -47,11 +42,11 @@ I can _instantiate_, or create an instance of, my class anywhere in the rest of 
 constructors I have defined:
 
 ```
-Point myPoint;               // Calls Point::Point(). Notice the lack of parentheses!
-Point myOtherPoint(5, 3, 4); // Calls two-argument constructor Point::Point(double, double, double). Notice auto type conversion!
+Point myPoint;               // Calls Point::Point()
+Point myOtherPoint(5, 3, 4); // Calls two-argument constructor Point::Point(double, double, double)
 ```
 
-### Your Task
+### My Task:
 
 1.  Fork the [Github repository for CSCI 2312 PA1](https://github.com/ivogeorg/ucd-csci2312-pa1). This becomes
     your _remote_ repository, against which you will work. Then clone it to your local development environment
@@ -180,14 +175,6 @@ add_executable(ucd_csci2312_pa1 ${SOURCE_FILES})
     tests, subsequent assignments might also check for coding style. Here is a short C++ programming [style guide]
     (http://courses.cms.caltech.edu/cs11/material/cpp/donnie/cppstyle.html) you can use as a reference. Adopting a
     good style early on, when the assingment is small, will pay off greatly and very soon.
-
-### Grading
-
-An autograding script will test your class on a variety of inputs and assign a grade based on the number of correct
-outputs. (E.g. if you get 3 out of 6 test cases correct, your correctness score will be 50%). The test suite for PA1
-has __56__ tests.
-
-* * *
 
 <font size="-1">ACKNOWLEDGEMENT: Modelled after CS11 Lab 1 at Caltech.</font>
 
