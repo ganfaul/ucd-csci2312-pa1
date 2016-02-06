@@ -45,6 +45,9 @@ constructors I have defined:
 Point myPoint;               // Calls Point::Point()
 Point myOtherPoint(5, 3, 4); // Calls two-argument constructor Point::Point(double, double, double)
 ```
+I also added a new member function to <tt>Point</tt> called <tt>distanceTo</tt>. This member function accepts as an
+argument a <u><tt>const Point &</tt></u> (a reference to a constant <tt>Point</tt>), and it returns a <tt>double</tt> 
+that approximates the distance between the two points. <tt>distanceTo</tt> is a _constant_ member function.
 
 ### My Task:
 
@@ -163,18 +166,6 @@ add_executable(ucd_csci2312_pa1 ${SOURCE_FILES})
    ```
    or, alternatively, in CLion, right-click on the new file, scroll down to __Git__ and then click __+ Add__.
 
-8.  Commit all code changes to your _local_ repository, then push the changes to the default __master__ branch of your
-    Github repository (aka _remote_ repository).
-
-9.  Update the [README.md](https://github.com/ivogeorg/ucd-csci2312-pa1/edit/master/README.md) file in your
-    _remote_ repository with a description of your 3D Point class. (Clicking on a file takes you to a view where you
-    can edit it.) You can use this file as a guide. Use the [Github Markdown Cheatsheet]
-    (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as a reference.
-
-10. Coding style is important for your career. While this assignment is going to be graded strictly on passing the
-    tests, subsequent assignments might also check for coding style. Here is a short C++ programming [style guide]
-    (http://courses.cms.caltech.edu/cs11/material/cpp/donnie/cppstyle.html) you can use as a reference. Adopting a
-    good style early on, when the assingment is small, will pay off greatly and very soon.
 
 <font size="-1">ACKNOWLEDGEMENT: Modelled after CS11 Lab 1 at Caltech.</font>
 
