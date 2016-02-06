@@ -57,7 +57,7 @@ Additionally, I added a source file called <tt>area.cpp</tt>, where I implemeted
  
  I compiled my project both with g++ from my terminal as well as within CLion, and passed all 56 tests in both environments.
 
-
+* * *
 
 <font size="-1">ACKNOWLEDGEMENT: Modelled after CS11 Lab 1 at Caltech.</font>
 
